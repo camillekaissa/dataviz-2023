@@ -9,8 +9,17 @@ function setup() {
     noFill();
     noStroke();
     let current_minute = minute(); 
-    setInterval(check_minute, 1000);
+    setInterval(check_minute, 1000); // call check minute every second
+}
+
+function check_minute() {
+  // print minute to the console once every minute
+  let minute = minute(); 
+  if (minute != current_minute){
+    console.log(minute);
+    current_minute = minute; 
   }
+}
 
 // draw() is called 60 times per second
 function draw() {
@@ -77,13 +86,3 @@ function draw() {
   }
   endShape();
 }
-
-function check_minute() {
-    // print minute to the console once every minute
-    let minute = minute(); 
-    if (minute != current_minute){
-      console.log(minute);
-      current_minute = minute; 
-    }
-}
-  
