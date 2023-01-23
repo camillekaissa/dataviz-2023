@@ -13,8 +13,6 @@ function setup() {
 
 // draw() is called 60 times per second
 function draw() {
-
-  check_minute();
   background(255);
   beginShape(); 
   
@@ -77,6 +75,9 @@ function draw() {
     noFill();
   }
   endShape();
+  
+  check_minute();
+
 }
 
 function check_minute() {
