@@ -8,11 +8,13 @@ function setup() {
     createCanvas(800,600); // make an HTML canvas element width x height pixels
     noFill();
     noStroke();
-    setInterval(print_minute, 60000); // call the function only once every minute
+    let current_minute = minute(); 
 }
 
 // draw() is called 60 times per second
 function draw() {
+
+  check_minute();
   background(255);
   beginShape(); 
   
@@ -77,8 +79,12 @@ function draw() {
   endShape();
 }
 
-function print_minute() {
-    // print minute to the console
-    console.log(minute());
+function check_minute() {
+    // print minute to the console once every minute
+    let minute = minute(); 
+    if (minute != current_minute){
+      console.log(minute);
+      current_minute = minute; 
+    }
 }
   
