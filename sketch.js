@@ -9,6 +9,7 @@ function setup() {
     noFill();
     noStroke();
     let current_minute = minute(); 
+    console.log(current_minute);
     setInterval(check_minute, 1000); // call check minute every second
 }
 
