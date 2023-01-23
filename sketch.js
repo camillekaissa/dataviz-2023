@@ -8,7 +8,10 @@ function setup() {
     createCanvas(800,600); // make an HTML canvas element width x height pixels
     noFill();
     noStroke();
+
+    // intialize the variable that tracks minute changes and print current minute
     current_minute = minute(); 
+    console.log(current_minute);
 }
 
 // draw() is called 60 times per second
@@ -16,6 +19,7 @@ function draw() {
   background(255);
   beginShape(); 
   
+  // if the minute changes print it to the console
   min = minute(); 
   if (min != current_minute){
     console.log(min);
