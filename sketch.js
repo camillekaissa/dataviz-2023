@@ -9,23 +9,18 @@ function setup() {
     noFill();
     noStroke();
     let current_minute = minute(); 
-    console.log(current_minute);
-    setInterval(check_minute, 1000); // call check minute every second
-}
-
-function check_minute() {
-  // print minute to the console once every minute
-  let minute = minute(); 
-  if (minute != current_minute){
-    console.log(minute);
-    current_minute = minute; 
-  }
 }
 
 // draw() is called 60 times per second
 function draw() {
   background(255);
   beginShape(); 
+  
+  let minute = minute(); 
+  if (minute != current_minute){
+    console.log(minute);
+    current_minute = minute; 
+  }
   
   // my abstract clock makes use of two visual indicators for the user to read the time
   // (1) the colors and (2) the number/position of circles
