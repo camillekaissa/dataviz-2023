@@ -9,7 +9,8 @@ function setup() {
     noFill();
     noStroke();
     let current_minute = minute(); 
-}
+    setInterval(check_minute, 1000);
+  }
 
 // draw() is called 60 times per second
 function draw() {
@@ -75,9 +76,6 @@ function draw() {
     noFill();
   }
   endShape();
-  
-  check_minute();
-
 }
 
 function check_minute() {
