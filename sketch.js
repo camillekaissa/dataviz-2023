@@ -16,12 +16,12 @@ function draw() {
   background(255);
   beginShape(); 
   
-  let minute = minute(); 
-  if (minute != current_minute){
-    console.log(minute);
-    current_minute = minute; 
+  let min = minute(); 
+  if (min != current_minute){
+    console.log(min);
+    current_minute = min; 
   }
-  
+
   // my abstract clock makes use of two visual indicators for the user to read the time
   // (1) the colors and (2) the number/position of circles
 
