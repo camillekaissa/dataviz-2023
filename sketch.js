@@ -8,7 +8,7 @@ function setup() {
     createCanvas(800,600); // make an HTML canvas element width x height pixels
     noFill();
     noStroke();
-    let current_minute = minute(); 
+    current_minute = minute(); 
 }
 
 // draw() is called 60 times per second
@@ -16,7 +16,7 @@ function draw() {
   background(255);
   beginShape(); 
   
-  let min = minute(); 
+  min = minute(); 
   if (min != current_minute){
     console.log(min);
     current_minute = min; 
